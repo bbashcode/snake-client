@@ -12,6 +12,12 @@ const connect = function () {
   conn.on('data', (data) => {
     console.log('LightHouse Python.....sssss', data)
    });
+
+  conn.on('connect', () =>{
+    console.log('Successfully connected to game server');
+    conn.write("Name: SSS");
+    conn.write("Yummy treatssssss....!");
+   });
   return conn;
 };
 
