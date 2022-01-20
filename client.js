@@ -1,3 +1,9 @@
+/***
+"Move: up" - move up one square (unless facing down)
+"Move: down" - move down one square (unless facing up)
+"Move: left" - move left one square (unless facing right)
+"Move: right" - move left one square (unless facing left)
+*/
 const net = require("net");
 
 // establishes a connection with the game server
@@ -16,10 +22,10 @@ const connect = function () {
   conn.on('connect', () =>{
     console.log('Successfully connected to game server');
     conn.write("Name: SSS");
-    conn.write("Yummy treatssssss....!");
    });
   return conn;
 };
+
 
 console.log("Connecting ...");
 connect();
